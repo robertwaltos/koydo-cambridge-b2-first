@@ -1,0 +1,45 @@
+// Cambridge B2 First Configuration
+// Generated from top_200_exam_universe_seed.csv
+
+export const EXAM_CONFIG = {
+  examId: "EXAM018",
+  slug: "cambridge-b2-first",
+  name: "Cambridge B2 First",
+  fullName: "B2 First",
+  alias: "B2 First",
+  family: "Cambridge English",
+  category: "Language proficiency",
+  subcategory: "Academic/general English",
+  country: "Global",
+  region: "Global",
+  languages: ["English"],
+  estimatedAnnualTakers: "varies",
+  testingWindow: "Year-round",
+  schedulePattern: "Scheduled sessions",
+  ageGroup: "14-35",
+  targetUser: "Student / worker",
+  delivery: "Paper/computer",
+  questionTypes: ["Reading","writing","listening","speaking","English use"],
+  adaptivity: "Linear",
+  sections: "5 papers/components",
+  scoringMode: "Scale/grades",
+  essayOrSpeaking: "Speaking + writing",
+  ipRisk: "High",
+  contentReuse: "language_4skills",
+  uiEngine: "5component_language",
+  monetizationPotential: "Medium",
+  tier: "Tier 3",
+  launchWave: "Wave 5",
+  themeColor: "#059669",
+  themeColorDark: "#047857",
+  localizationComplexity: "Medium",
+  offlineNeeded: false,
+  mobileFirst: false,
+  locale: "en",
+  isRTL: false,
+  freemiumGate: {
+    dailyQuestions: 10,
+  },
+} as const;
+
+export type ExamConfig = typeof EXAM_CONFIG;
