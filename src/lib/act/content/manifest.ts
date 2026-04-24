@@ -8,7 +8,8 @@ export type ActivityType =
   | "scenario_based" | "coding_challenge" | "case_study" | "calculation"
   | "simulation" | "gamified_quiz" | "portfolio_review" | "visual_mcq"
   | "branching_scenario" | "heading_matching" | "project_based" | "story_based"
-  | "sql_challenge" | "rubric_assessment" | "peer_review" | "timeline_ordering";
+  | "sql_challenge" | "rubric_assessment" | "peer_review" | "timeline_ordering"
+  | "word_formation" | "report" | "review" | "gapped_text" | "proposal" | "collaborative_task";
 
 export type ExamCategory =
   | "admissions" | "language_cert" | "professional" | "k12_national"
@@ -21,6 +22,7 @@ export interface TopicManifest {
   icon: string;
   color: string;
   questionTarget: number;
+  minQuestionCount: number;
   activityTypes: ActivityType[];
 }
 
@@ -45,6 +47,7 @@ export const CONTENT_MANIFEST: ContentManifest = {
     icon: "📖",
     color: "#059669",
     questionTarget: 900,
+    minQuestionCount: 900,
     activityTypes: ["multiple_choice", "cloze_deletion", "word_formation"],
   },
   {
@@ -54,6 +57,7 @@ export const CONTENT_MANIFEST: ContentManifest = {
     icon: "✍️",
     color: "#1E40AF",
     questionTarget: 400,
+    minQuestionCount: 400,
     activityTypes: ["essay", "report", "review"],
   },
   {
@@ -63,6 +67,7 @@ export const CONTENT_MANIFEST: ContentManifest = {
     icon: "🎧",
     color: "#D97706",
     questionTarget: 600,
+    minQuestionCount: 600,
     activityTypes: ["multiple_choice", "fill_in_blank"],
   },
   {
@@ -72,6 +77,7 @@ export const CONTENT_MANIFEST: ContentManifest = {
     icon: "🗣️",
     color: "#7C3AED",
     questionTarget: 300,
+    minQuestionCount: 300,
     activityTypes: ["voice_explanation"],
   }
   ],
